@@ -3,7 +3,7 @@
 // Modify the function below to return the first item of the array that is being passed in
 
 function first(arr) {
-  //Code here
+  return arr.shift() //Code here
 }
 
 //////////////////PROBLEM 2////////////////////
@@ -11,7 +11,7 @@ function first(arr) {
 // Modify the function below to return the length of the array that is being passed in
 
 function length(arr) {
-  //Code here
+  return arr.length //Code here
 }
 
 //////////////////PROBLEM 3////////////////////
@@ -19,7 +19,7 @@ function length(arr) {
 // Modify the function below to return the last item of the array that is being passed in
 
 function last(arr) {
-  //Code here
+  return arr.pop() //Code here
 }
 
 //////////////////PROBLEM 4////////////////////
@@ -27,7 +27,7 @@ function last(arr) {
 // Modify the function below to add the passed in number to the end of the passed in array
 
 function addItem(array, number) {
-  //Code here
+  array.push(number) //Code here
   return array
 }
 
@@ -36,7 +36,7 @@ function addItem(array, number) {
 // Modify the function below to remove the last item of the array being passed in
 
 function removeLast(array) {
-  //Code here
+  array.pop()//Code here
   return array
 }
 
@@ -45,7 +45,7 @@ function removeLast(array) {
 // Modify the function below to remove the first item of the array being passed in
 
 function removeFirst(array) {
-  //Code here
+  array.shift()//Code here
   return array
 }
 
@@ -56,10 +56,9 @@ function removeFirst(array) {
 function maker() {
   var numbers = []
   for (var i = 0; i <= 25; i++) {
-    //Code here
+  numbers.push(i) //Code here
   }
-
-  return numbers
+return numbers
 }
 
 //////////////////PROBLEM 8////////////////////
@@ -68,9 +67,9 @@ function maker() {
 
 function count31() {
   var numbers = []
-
-  //Code here
-
+  for (var i = 0; i <= 31; i++){//Code here
+  numbers.push(i)
+  }
   return numbers
 }
 
@@ -82,15 +81,15 @@ function count31() {
 // backWards( [ true, false ] ); -> [ false, true ]
 // backWards( [ 'first', 'last' ] ); -> [ 'last', 'first' ]
 
-function backWards(arr) {
-  var newArray = []
+// function backWards(arr) {
+//   var newArray = []
 
-  for (var i = arr.length - 1; i >= 0; i--) {
-    // code here
-  }
+//   for (var i = arr.length - 1; i >= 0; i--) {
+//     newArray.reverse() // code here
+//   }
 
-  return newArray
-}
+//   return newArray
+// }
 
 //////////////////PROBLEM 10////////////////////
 
@@ -99,9 +98,13 @@ function backWards(arr) {
 // findInArray([0,1,2,3], 3); -> true
 // findInArray([0,1,2,3], 4); -> false
 
-function findInArray(arr, value) {
-  // code here
-}
+// function findInArray(arr, value) {
+//   if (findInArray === arr || value){
+//     return true
+//   } else {
+//     return false
+//   }// code here
+// }
 
 //////////////////PROBLEM 11////////////////////
 
@@ -110,15 +113,15 @@ function findInArray(arr, value) {
 // addTen([10,20,30]); -> [20,30,40]
 // addTen([1,2,3,4]); -> [11,12,13,14]
 
-function addTen(arr) {
-  var newArr = []
+// function addTen(arr) {
+//   var newArr = []
 
-  for (var i = 0; i < arr.length; i++) {
-    // code here
-  }
+//   for (var i = 0; i < arr.length; i++) {
+//     arr.push(i) // code here
+//   }
 
-  return newArr
-}
+//   return newArr
+// }
 
 //////////////////PROBLEM 12////////////////////
 

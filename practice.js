@@ -77,19 +77,18 @@ function count31() {
 
 // Using the given for loop, fill the newArray with the passed in array's elements in reverse order.
 // For example:
-// backWards( [0,1,2,3] ); -> [3,2,1,0]
+// backWards( ); -> [3,2,1,0]
 // backWards( [ true, false ] ); -> [ false, true ]
-// backWards( [ 'first', 'last' ] ); -> [ 'last', 'first' ]
+// backWards( [ [0,1,2,3] 'first', 'last' ] ); -> [ 'last', 'first' ]
 
-// function backWards(arr) {
-//   var newArray = []
+function backWards(arr) {
+  var newArray = []
 
-//   for (var i = arr.length - 1; i >= 0; i--) {
-//     newArray.reverse() // code here
-//   }
-
-//   return newArray
-// }
+  for (var i = arr.length - 1; i >= 0; i--) {
+    newArray.push(arr[i]) // code here
+  }
+return newArray
+}
 
 //////////////////PROBLEM 10////////////////////
 
@@ -98,13 +97,15 @@ function count31() {
 // findInArray([0,1,2,3], 3); -> true
 // findInArray([0,1,2,3], 4); -> false
 
-// function findInArray(arr, value) {
-//   if (findInArray === arr || value){
-//     return true
-//   } else {
-//     return false
+function findInArray(arr, value) {
+  for (let i=0; i< arr.length; i++){
+   if (arr[i] === value){
+    return true
+    }  
+  } 
+  return false
 //   }// code here
-// }
+}
 
 //////////////////PROBLEM 11////////////////////
 
@@ -113,15 +114,14 @@ function count31() {
 // addTen([10,20,30]); -> [20,30,40]
 // addTen([1,2,3,4]); -> [11,12,13,14]
 
-// function addTen(arr) {
-//   var newArr = []
+function addTen(arr) {
+  var newArr = []
 
-//   for (var i = 0; i < arr.length; i++) {
-//     arr.push(i) // code here
-//   }
-
-//   return newArr
-// }
+  for (var i = 0; i < arr.length; i++) {
+    newArr.push(arr[i] + 10) // code here
+  }
+  return newArr
+}
 
 //////////////////PROBLEM 12////////////////////
 
@@ -130,11 +130,11 @@ function count31() {
 function personName() {
   var person = {
     firstName: 'sally',
-    lastName: 'smith',
+    lastName: 'smith',                                                                                                                                                              
     age: 29,
     location: 'Orem, UT',
   }
-  return // Code here
+  return (person.firstName) // Code here
 }
 
 //////////////////PROBLEM 13////////////////////
@@ -148,7 +148,7 @@ function personLocation() {
     age: 29,
     location: 'Orem, UT',
   }
-  return // Code Here
+  return person['location'] // Code Here
 }
 
 //////////////////PROBLEM 14////////////////////
@@ -157,7 +157,8 @@ function personLocation() {
 
 const backpack = {}
 
-// Code Here
+backpack.frontPocket= "compass"; // Code Here
+
 
 //////////////////PROBLEM 15////////////////////
 
@@ -165,7 +166,8 @@ const backpack = {}
 
 const box = {}
 
-// Code Here
+box['material'] = 'cardboard';  // Code Here
+
 
 //////////////////PROBLEM 16////////////////////
 
@@ -175,6 +177,7 @@ const person = {}
 
 person['firstName'] = 'sally'
 
+var userFirstName = person.firstName;
 //code here
 
 //////////////////PROBLEM 17////////////////////
@@ -189,7 +192,10 @@ person['firstName'] = 'sally'
 // };
 
 function updateUser(user) {
-  // Code Here
+  user.name='Ryan',
+  user.pwHash='superSafe',
+  user.username='ryan2020';
+   return user // Code Here
 }
 
 //////////////////PROBLEM 18////////////////////
@@ -197,6 +203,8 @@ function updateUser(user) {
 //Inside the function updateEmail, update the email property of the passed in object to be the value of the parameter str. Return the updated object.
 
 function updateEmail(obj, str) {
+  obj.email = str;
+   return obj
   // Code here
 }
 
@@ -204,13 +212,25 @@ function updateEmail(obj, str) {
 
 // Write a function called isOldEnough that takes a person obj and checks the age property to see if the person is old enough to enter the club.  If they are 21 or older return true else return false.
 
+function isOldEnough (person) {
+  if (person.age >= 21) {
+    return true
+  } else {
+    return false
+  }
 // Code here
+}    
 
 //////////////////PROBLEM 20////////////////////
 
-//Create a function called addRole that takes in a user object as the first parameter and a string as the second parameter.  The string will represent the user's new role in the system (i.e. admin, creator, editor, visitor). Create a new property on the user object called "role" and assign the passed in string to it, then return the updated object.
+//Create a function called addRole that takes in a user object as the first parameter and a string as the second parameter.  
+// The string will represent the user's new role in the system (i.e. admin, creator, editor, visitor).
+//  Create a new property on the user object called "role" and assign the passed in string to it, then return the updated object.
 
-// Code here
+// function addRole (user, string){
+
+// };// Code here 
+ 
 
 ///////////////////////////////////////////////////////
 

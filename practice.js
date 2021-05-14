@@ -227,9 +227,10 @@ function isOldEnough (person) {
 // The string will represent the user's new role in the system (i.e. admin, creator, editor, visitor).
 //  Create a new property on the user object called "role" and assign the passed in string to it, then return the updated object.
 
-// function addRole (user, string){
-
-// };// Code here 
+function addRole (user, string){
+user.role = string;
+return user
+};// Code here 
  
 
 ///////////////////////////////////////////////////////
@@ -263,12 +264,16 @@ function checkAge(age) {
 // Rewrite the existing if statement as a ternary.
 
 function schoolStatus(status) {
-  // if (status == 'Good') {
-  //   return 'Wow, great job kiddo!'
-  // } else {
-  //   return 'No more video games!'
-  // }
-}
+  return status ==  'Good'  // if (status == 'Good') { 
+    ?  `Wow, great job kiddo!` //   return 'Wow, great job kiddo!'
+    : // } else {
+    `No more video games!`//   return 'No more video games!'
+    // }
+  };
+
+
+
+
 
 //////////////////PROBLEM 22////////////////////
 
@@ -278,16 +283,23 @@ function schoolStatus(status) {
 // If age is 18, return: Congrats on being an adult!
 // If age is greater than 18, return: Somebody is really getting up there, huh?
 
-function messageBasedOnAge(age) {
-  //code here
-}
+function messageBasedOnAge(age) { 
+  return age < 18 
+  ? 'Not quite old enough, sorry.'
+  : age == 18 
+  ? 'Congrats on being an adult!'
+  : 'Somebody is really getting up there, huh?'
+};//code here
+
 
 //////////////////PROBLEM 23////////////////////
 
 // Create a function called outerFn, that takes in a callback as a parameter, and then returns that callback invoked.
 // To see it working, invoke outerFn at the bottom, passing in the InnerFn as the callback. You should now see "The innerFn is a callback!" in the console.
 
-// Create function here
+function outerFn (callback){
+  return callback ()
+};// Create function here
 
 // ===== DO NOT TOUCH CODE BELOW THIS LINE ===== //
 function innerFn() {
@@ -295,7 +307,7 @@ function innerFn() {
 }
 // ===== DO NOT TOUCH CODE ABOVE THIS LINE ===== //
 
-// Invoke function here
+outerFn(innerFn)// Invoke function here
 
 //////////////////PROBLEM 24////////////////////
 
@@ -304,6 +316,9 @@ function innerFn() {
 // To test, invoke fullName with your first name, last name and the welcomeMessage function as arguments.
 
 // Create function fullName here
+function fullName (firstName, lastName, cb){
+return cb (firstName, lastName)
+};
 
 // ===== DO NOT TOUCH CODE BELOW THIS LINE ===== //
 function welcomeMessage(first, last) {
@@ -312,6 +327,8 @@ function welcomeMessage(first, last) {
 // ===== DO NOT TOUCH CODE ABOVE THIS LINE ===== //
 
 // Invoke fullName below
+
+fullName(Daniela, Garcia, welcomeMessage)
 
 //////////////////PROBLEM 25////////////////////
 
@@ -336,6 +353,14 @@ function drinkAlcohol() {
 // ===== DO NOT TOUCH CODE ABOVE THIS LINE ===== //
 
 // Create function canDrink here
+function canDrink (age, cb1, cb2){
+if (age < 21){
+  return cb1() 
+} else {
+  return drinkAlcohol()
+}
+};
+canDrink (25,drinkSoda, drinkAlcohol)
 
 //////////////////PROBLEM 26////////////////////
 
@@ -344,4 +369,16 @@ function drinkAlcohol() {
 // Write a function called math that takes in two numbers, and a callback 'operator' as parameters.
 // This function should return a operator invoked with the appropriate arguments.
 
+
+function add (num1, num2){
+return num1+num2
+};
+
+function multiply (num1, num2){
+return num1*num2
+};
+
+function math (num1, num2, cb){
+return cb(num1, num2)
+};
 //Code here
